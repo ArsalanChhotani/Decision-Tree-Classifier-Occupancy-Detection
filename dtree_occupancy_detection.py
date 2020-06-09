@@ -17,7 +17,7 @@ from sklearn.tree import DecisionTreeClassifier
 
 #types = {"Temperature" :float,"Humidity" :float,"Light" :float,"CO2" :float,"HumidityRatio" :float,"Occupancy" :int}
 names = ["Temperature","Humidity","Light","CO2","HumidityRatio","Occupancy"]
-dataset = pd.read_csv("E:\\Laptop Stuff 2020\\DS\\XYZ\\Data Science Assignments\\Labs\\Lab_5\\Occupency_Detection\\datatraining.txt", usecols=names) #dtypes = types #
+dataset = pd.read_csv("datatraining.txt", usecols=names) #dtypes = types #
 
 
 #array = dataset.values
@@ -25,8 +25,8 @@ X_train = dataset.iloc[:,2:5]
 
 Y_train = dataset["Occupancy"]
 print(X_train)
-dataset = pd.read_csv("E:\\Laptop Stuff 2020\\DS\\XYZ\\Data Science Assignments\\Labs\\Lab_5\\Occupency_Detection\\datatest.txt",usecols=names)
-dataset.append(pd.read_csv("E:\\Laptop Stuff 2020\\DS\\XYZ\\Data Science Assignments\\Labs\\Lab_5\\Occupency_Detection\\datatest2.txt",usecols=names))
+dataset = pd.read_csv("datatest.txt",usecols=names)
+dataset.append(pd.read_csv("datatest2.txt",usecols=names))
 
 
 X_test = dataset.iloc[:,2:5]
